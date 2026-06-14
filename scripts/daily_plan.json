@@ -1,0 +1,286 @@
+{
+  "day_plans": [
+    {
+      "day": 1,
+      "completed": true,
+      "tasks": [
+        {
+          "name": "Initialize Git repository and directories",
+          "commit": "chore: initial repository setup and directories"
+        },
+        {
+          "name": "Define requirements.txt and create venv",
+          "commit": "chore: add requirements.txt and configure virtualenv"
+        },
+        {
+          "name": "Implement state tracker and verify_and_push automation",
+          "commit": "feat(automation): add state tracking and verify_and_push scripts"
+        },
+        {
+          "name": "Create Day 1 verification unit tests",
+          "commit": "test(day-1): verify directory structure, venv, and state"
+        }
+      ]
+    },
+    {
+      "day": 2,
+      "completed": false,
+      "tasks": [
+        {
+          "name": "Create transaction generator class in src/data_pipeline.py",
+          "commit": "feat(data): implement synthetic transaction generator mimicking credit card features"
+        },
+        {
+          "name": "Implement scaler and train/test splitter",
+          "commit": "feat(data): add preprocessing and robust scaling pipeline"
+        },
+        {
+          "name": "Write unit tests for data generator and scaling",
+          "commit": "test(data): add tests for transaction generator shapes and scaling ranges"
+        }
+      ]
+    },
+    {
+      "day": 3,
+      "completed": false,
+      "tasks": [
+        {
+          "name": "Implement evaluation metric calculations (Precision, Recall, F1, PR-AUC)",
+          "commit": "feat(eval): implement custom precision, recall, F1, and PR-AUC metric calculators"
+        },
+        {
+          "name": "Train baseline Random Forest model and save it",
+          "commit": "feat(model): train and serialize baseline random forest model"
+        },
+        {
+          "name": "Add unit tests to verify baseline metrics",
+          "commit": "test(model): add tests for random forest evaluation metrics"
+        }
+      ]
+    },
+    {
+      "day": 4,
+      "completed": false,
+      "tasks": [
+        {
+          "name": "Implement Isolation Forest model class",
+          "commit": "feat(model): implement isolation forest training pipeline for anomaly detection"
+        },
+        {
+          "name": "Tune Isolation Forest contamination hyperparameters",
+          "commit": "refactor(model): optimize isolation forest contamination thresholds"
+        },
+        {
+          "name": "Serialize and save Isolation Forest model and scaler",
+          "commit": "feat(model): save trained isolation forest model and robust scaler to models/"
+        },
+        {
+          "name": "Write unit tests for Isolation Forest prediction",
+          "commit": "test(model): add unit tests for isolation forest anomaly scoring"
+        }
+      ]
+    },
+    {
+      "day": 5,
+      "completed": false,
+      "tasks": [
+        {
+          "name": "Build scikit-learn MLPRegressor Autoencoder class",
+          "commit": "feat(model): implement MLPRegressor neural autoencoder class"
+        },
+        {
+          "name": "Train Autoencoder model on normal transaction samples",
+          "commit": "feat(model): train autoencoder network on normal transaction data"
+        },
+        {
+          "name": "Implement reconstruction loss anomaly scoring",
+          "commit": "feat(model): add reconstruction error calculations for anomaly probability scoring"
+        },
+        {
+          "name": "Write Autoencoder unit tests",
+          "commit": "test(model): add tests for autoencoder training and loss evaluation"
+        }
+      ]
+    },
+    {
+      "day": 6,
+      "completed": false,
+      "tasks": [
+        {
+          "name": "Compare Isolation Forest and Autoencoder models",
+          "commit": "feat(eval): implement model comparison pipeline for PR-AUC and F2-Score"
+        },
+        {
+          "name": "Calibrate optimal decision threshold for F2-Score",
+          "commit": "refactor(model): calibrate decision threshold to optimize F2-score (recall-heavy)"
+        },
+        {
+          "name": "Save selected champion model as champion_model.joblib",
+          "commit": "feat(model): register champion anomaly detection model for API inference"
+        },
+        {
+          "name": "Add validation tests for threshold calibration",
+          "commit": "test(eval): add threshold calibration validation tests"
+        }
+      ]
+    },
+    {
+      "day": 7,
+      "completed": false,
+      "tasks": [
+        {
+          "name": "Design FastAPI schemas matching Stripe Radar response model",
+          "commit": "feat(api): define request and response schemas for transaction scoring API"
+        },
+        {
+          "name": "Implement core FastAPI server and scoring endpoint",
+          "commit": "feat(api): implement FastAPI server and `/v1/transactions/score` endpoint"
+        },
+        {
+          "name": "Write API server unit tests using FastAPI TestClient",
+          "commit": "test(api): add unit tests for FastAPI scoring server endpoint and response shapes"
+        }
+      ]
+    },
+    {
+      "day": 8,
+      "completed": false,
+      "tasks": [
+        {
+          "name": "Build deterministic rules engine",
+          "commit": "feat(rules): implement rules engine for limit, velocity, and geographic checks"
+        },
+        {
+          "name": "Integrate rules engine with ML model scores",
+          "commit": "feat(rules): merge ML model anomaly scores with rules engine outputs for hybrid risk score"
+        },
+        {
+          "name": "Write unit tests for rules engine logic and overrides",
+          "commit": "test(rules): add unit tests for rules engine overrides and high-risk triggers"
+        }
+      ]
+    },
+    {
+      "day": 9,
+      "completed": false,
+      "tasks": [
+        {
+          "name": "Configure Docker execution for Redpanda (Kafka-compatible broker)",
+          "commit": "chore(infra): add docker script to pull and run single-node Redpanda broker"
+        },
+        {
+          "name": "Create Kafka topic management utilities",
+          "commit": "feat(infra): add python utilities to create and list Kafka topics"
+        },
+        {
+          "name": "Write broker connectivity tests",
+          "commit": "test(infra): add integration tests for Redpanda broker connection and topic creation"
+        }
+      ]
+    },
+    {
+      "day": 10,
+      "completed": false,
+      "tasks": [
+        {
+          "name": "Implement Kafka transaction producer in src/producer.py",
+          "commit": "feat(stream): implement Kafka transaction producer streaming transaction feed"
+        },
+        {
+          "name": "Add rate limiter control to producer streaming",
+          "commit": "feat(stream): add configurable message rate streaming controls to Kafka producer"
+        },
+        {
+          "name": "Write transaction producer unit tests",
+          "commit": "test(stream): add unit tests verifying message delivery to transactions topic"
+        }
+      ]
+    },
+    {
+      "day": 11,
+      "completed": false,
+      "tasks": [
+        {
+          "name": "Implement real-time transaction scoring consumer in src/consumer.py",
+          "commit": "feat(stream): implement Kafka transaction consumer for scoring messages"
+        },
+        {
+          "name": "Publish flagged anomalies to fraud-alerts Kafka topic",
+          "commit": "feat(stream): publish high-risk transaction alerts to fraud-alerts topic"
+        },
+        {
+          "name": "Write consumer scoring unit tests",
+          "commit": "test(stream): add tests for real-time scoring consumer stream"
+        }
+      ]
+    },
+    {
+      "day": 12,
+      "completed": false,
+      "tasks": [
+        {
+          "name": "Implement sqlite database connector and logging consumer",
+          "commit": "feat(alert): implement sqlite database logging for fraud alerts"
+        },
+        {
+          "name": "Mock webhook alerting and Slack notifications",
+          "commit": "feat(alert): implement mocked Slack webhook notifications for high-risk fraud alerts"
+        },
+        {
+          "name": "Write database and webhook alerting tests",
+          "commit": "test(alert): add tests for sqlite alert log database and notification mock"
+        }
+      ]
+    },
+    {
+      "day": 13,
+      "completed": false,
+      "tasks": [
+        {
+          "name": "Build terminal-based transaction console stream dashboard using rich",
+          "commit": "feat(ui): implement real-time terminal monitor dashboard using Rich"
+        },
+        {
+          "name": "Add live metrics and charts to terminal dashboard",
+          "commit": "feat(ui): add live counters, fraud rate percentage, and rolling alert feed to dashboard"
+        },
+        {
+          "name": "Write test cases verifying dashboard metrics calculations",
+          "commit": "test(ui): add unit tests for terminal dashboard statistics renderer"
+        }
+      ]
+    },
+    {
+      "day": 14,
+      "completed": false,
+      "tasks": [
+        {
+          "name": "Write end-to-end pipeline integration test cases",
+          "commit": "test(integration): implement end-to-end integration tests linking producer, consumer, API, and DB"
+        },
+        {
+          "name": "Execute pipeline diagnostics and debug stream bottlenecks",
+          "commit": "refactor(integration): resolve latency and queue blocking bugs in stream scoring"
+        }
+      ]
+    },
+    {
+      "day": 15,
+      "completed": false,
+      "tasks": [
+        {
+          "name": "Implement latency and performance profiling of API and stream consumer",
+          "commit": "perf: benchmark endpoint scoring latency and consumer throughput"
+        },
+        {
+          "name": "Complete comprehensive README.md and setup instructions",
+          "commit": "docs: update README.md with system architecture diagrams and startup manuals"
+        },
+        {
+          "name": "Clean up temporary logs and models directories",
+          "commit": "chore: clean up project directories and finalize repository structure"
+        }
+      ]
+    }
+  ]
+}
