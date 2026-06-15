@@ -1,6 +1,8 @@
 {
-  "current_day": 1,
-  "completed_days": [],
+  "current_day": 2,
+  "completed_days": [
+    1
+  ],
   "project_name": "stripe-radar-clone",
   "github_configured": false
 }
